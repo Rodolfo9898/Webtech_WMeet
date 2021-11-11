@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="start page">
+    <meta name="author" content="Rodolfo Alberto Pérez Tobar, Zoë Bellers">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+
+    <script src="js/inputValidation.js"></script>
+</head>
+
+<body>
+
+    <div class="container-sm p-5 mt-5">
+        <div class="row" aria-hidden="true">
+            <div class="col p-3"></div>
+            <div class="col">
+                <div class="shadow p-3 mt-5 bg-body container px-4 p-3 border rounded">
+                    <!-- <h1 class="text-center">TITLE</h1> -->
+                    <h1 class="text-center mb-1"><img src="img/logostrt.png" alt="logo" height="60"></h1>
+                    <h2 class="text-center mb-5">slogan! slogan! slogan!</h2>
+                    <form id="signInForm" class="needs-validation" method="post" novalidate>
+                        <div class="mb-3">
+                            <input type="text" name="username" id="username" placeholder="Enter Username" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Valid username name is required.
+                            </div>
+                        </div>
+                        <div class="mb-3 ">
+                            <input type="password" name="password" id="password" placeholder="Enter Password" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Valid password is required.
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                            <label class="form-check-label" for="dropdownCheck">Remember me</label>
+                        </div>
+                        <div class="mb-3 my-4">
+                            <input type="submit" name="signinbtn" value="Sign in" class="form-control btn-primary w-100 p-2 fs-6">
+                        </div>
+                    </form>
+                    <div class="text-center">
+                        <a class="dropdown-item" href="#">Forgot password?</a>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <button type="button" class="btn btn-primary btn-sm w-100 p-2 fs-6 " data-toggle="modal" data-target="#signup">Sign up</button>
+                </div>
+            </div>
+            <div class="col p-3"></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="purchaseLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Sign up</h5>
+                    <span type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</span>
+                    <!-- <button type="button" aria-hidden="true" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button> -->
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm" class="needs-validation" method="post" novalidate>
+                        <div class="mb-3">
+                            <input type="text" id="username" name="username" placeholder="Username" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Valid username is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="firstname" name="firstname" placeholder="First name" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Valid firstname is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="lastname" name="lastname" placeholder="Last name" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Valid lastname is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <select id="school" name="school" class="custom-select form-control" required>
+                                <option value="" disabled selected>University/College</option>
+                                <option value="Vrije Universiteit Brussel">Vrije Universiteit Brussel</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Valid school is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" id="email" name="email" placeholder="School E-mail" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Valid email is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" id="password" name="password" placeholder="Password" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Valid password is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Confirmation of password is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="submit" id="registerbtn" value="Register" class="form-control btn-primary btn-sm w-100 p-2 fs-6 ">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
