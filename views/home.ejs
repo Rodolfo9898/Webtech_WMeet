@@ -10,10 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
-
     <link rel="stylesheet" , href="css/homestyle.css">
 </head>
 
@@ -21,9 +17,11 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.png" alt="notifcation button">
-            </a>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/home">
+                    <img src="img/logo.png" alt="notifcation button">
+                </a>
+            </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -43,6 +41,14 @@
                         <a class="nav-link" href="#">
                             <img src="img/inbox.png" alt="inbox"> inbox
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- <a class="nav-link" href="/logout">
+                            <button class="btn btn-outline" type="submit">Log Out</button>
+                        </a> -->
+                        <form action="/logout">
+                            <input type="submit" value="logout" />
+                        </form>
                     </li>
                 </ul>
             </div>
