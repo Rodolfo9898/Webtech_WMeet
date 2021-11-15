@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noEmitHelpers": true,
+        "importHelpers": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "declaration": true,
+        "rootDir": "src",
+        "outDir": "dist",
+        "allowJs": true
+    },
+    "include": [
+        "src/**/*",
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
