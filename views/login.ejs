@@ -12,12 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
-
     <script src="js/inputValidation.js"></script>
-    <link rel="stylesheet" , href="css/startstyle.css">
 </head>
 
 <body>
@@ -30,7 +25,7 @@
                     <!-- <h1 class="text-center">TITLE</h1> -->
                     <h1 class="text-center mb-1"><img src="img/logostrt.png" alt="logo" height="60"></h1>
                     <h2 class="text-center mb-5">slogan! slogan! slogan!</h2>
-                    <form id="signInForm" class="needs-validation" method="post" novalidate>
+                    <form id="signInForm" class="needs-validation" action="/login" method="post" novalidate>
                         <div class="mb-3">
                             <input type="text" name="username" id="username" placeholder="Enter Username" class="form-control" required>
                             <div class="invalid-feedback">
@@ -73,7 +68,7 @@
                     </button> -->
                 </div>
                 <div class="modal-body">
-                    <form id="signupForm" class="needs-validation" method="post" novalidate>
+                    <form id="signupForm" class="needs-validation" action="/register" method="post" novalidate>
                         <div class="mb-3">
                             <input type="text" id="username" name="username" placeholder="Username" class="form-control" required>
                             <div class="invalid-feedback">
@@ -81,15 +76,15 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input type="text" id="firstname" name="firstname" placeholder="First name" class="form-control" required>
-                            <div class="invalid-feedback">
-                                Valid firstname is required.
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" id="lastname" name="lastname" placeholder="Last name" class="form-control" required>
-                            <div class="invalid-feedback">
-                                Valid lastname is required.
+                            <div class="input-group">
+                                <input type="text" id="firstname" name="firstname" placeholder="First name" class="form-control" required>
+                                <div class="invalid-feedback">
+                                    Valid firstname is required.
+                                </div>
+                                <input type="text" id="lastname" name="lastname" placeholder="Last name" class="form-control" required>
+                                <div class="invalid-feedback">
+                                    Valid username is required.
+                                </div>
                             </div>
                         </div>
                         <div class="mb-3">

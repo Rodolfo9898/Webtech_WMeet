@@ -1,18 +1,30 @@
-import { ObjectID } from "bson";
+import mongoose = require("mongoose");
 
-export class User {
-    // this needs to be expandable to school who do not have enrollment numbers
-    id: ObjectID;
-    firstname: string;
-    lastname: string;
-    school: string;
-    email: string;
-
-    constructor(id: ObjectID, firstname:string, lastname:string, school:string, email:string){
-        this.id = id, 
-        this.firstname = firstname,
-        this.lastname = lastname,
-        this.school = school,
-        this.email = email
+const userSchema = new mongoose.Schema({
+    username: {
+        type: String,
+        required: true
+    },
+    firstname: {
+        type: String,
+        required: true
+    },
+    lastname: {
+        type: String,
+        required: true
+    },
+    school: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
     }
-}
+})
+
+export const user = mongoose.model("User", userSchema);
